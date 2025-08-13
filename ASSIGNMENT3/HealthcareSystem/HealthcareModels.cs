@@ -4,9 +4,8 @@ using System.Linq;
 
 namespace HealthCareManagement
 {
-    /// <summary>
+    
     /// Generic repository for entity management.
-    /// </summary>
     /// <typeparam name="T">reference type (class)</typeparam>
     public class Repository<T> where T : class
     {
@@ -30,10 +29,9 @@ namespace HealthCareManagement
         }
     }
 
-    /// <summary>
+  
     /// Patient model
     /// Fields: int Id, string Name, int Age, string Gender
-    /// </summary>
     public class Patient
     {
         public int Id { get; }

@@ -2,7 +2,8 @@
 using FinanceManagement;       // Q1
 using HealthCareManagement;    // Q2
 using WarehouseManagement;     // Q3
-using SchoolGradingSystem;     // Q4 - this was missing
+using SchoolGradingSystem;     // Q4 
+using InventoryManagement;     // Q5
 
 namespace Assignment3
 {
@@ -15,6 +16,7 @@ namespace Assignment3
             Console.WriteLine("2. Health Care System");
             Console.WriteLine("3. Warehouse Inventory Management");
             Console.WriteLine("4. School Grading System");
+            Console.WriteLine("5. Inventory Management System");
             Console.Write("Enter choice: ");
             string choice = Console.ReadLine() ?? string.Empty;
 
@@ -35,6 +37,10 @@ namespace Assignment3
                 case "4":
                     var resultProcessor = new StudentResultProcessor();
                     resultProcessor.Run();
+                    break;
+
+                case "5":
+                    new InventoryApp().Run();
                     break;
 
                 default:
