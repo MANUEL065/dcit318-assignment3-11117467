@@ -1,0 +1,7 @@
+Alice Smith (ID: 101): Score = 84, Grade = A
+Bob Johnson (ID: 102): Score = 72, Grade = B
+Charlie Brown (ID: 103): Score = 67, Grade = C
+Diana Prince (ID: 104): Score = 54, Grade = D
+Evan Davis (ID: 105): Score = 43, Grade = F
+George Alfed (ID: 106): Score = 89, Grade = A
+Kofi Boakye (ID: 107): Score = 50, Grade = D
