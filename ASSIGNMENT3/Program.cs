@@ -1,6 +1,7 @@
 ﻿using System;
-using FinanceManagement;    // your Q1 namespace
-using HealthCareManagement; // Q2 namespace
+using FinanceManagement;      // Q1
+using HealthCareManagement;   // Q2
+using WarehouseManagement;    // Q3
 
 namespace Assignment3
 {
@@ -11,6 +12,7 @@ namespace Assignment3
             Console.WriteLine("=== Assignment Runner ===");
             Console.WriteLine("1. Finance Management System");
             Console.WriteLine("2. Health Care System");
+            Console.WriteLine("3. Warehouse Inventory Management");
             Console.Write("Enter choice: ");
             string choice = Console.ReadLine() ?? "";
 
@@ -21,6 +23,9 @@ namespace Assignment3
                     break;
                 case "2":
                     new HealthCareApp().Run();
+                    break;
+                case "3":
+                    new WareHouseManager().Run();
                     break;
                 default:
                     Console.WriteLine("Invalid choice.");

@@ -1,4 +1,3 @@
-// HealthcareModels.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,10 +52,9 @@ namespace HealthCareManagement
         public override string ToString() => $"Id: {Id}, Name: {Name}, Age: {Age}, Gender: {Gender}";
     }
 
-    /// <summary>
+
     /// Prescription model
     /// Fields: int Id, int PatientId, string MedicationName, DateTime DateIssued
-    /// </summary>
     public class Prescription
     {
         public int Id { get; }

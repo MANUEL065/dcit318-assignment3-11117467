@@ -1,14 +1,13 @@
-// HealthCareApp.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace HealthCareManagement
 {
-    /// <summary>
+
     /// HealthSystemApp implements the logic required by the assignment.
     /// NOTE: No Main() inside this file. Use Program.cs to call Run().
-    /// </summary>
+
     public class HealthCareApp
     {
         // Fields required by the spec
@@ -16,9 +15,8 @@ namespace HealthCareManagement
         private readonly Repository<Prescription> _prescriptionRepo = new();
         private readonly Dictionary<int, List<Prescription>> _prescriptionMap = new();
 
-        /// <summary>
+        
         /// Seed repository with 2–3 patients and 4–5 prescriptions (matching PatientIds).
-        /// </summary>
         public void SeedData()
         {
             // Patients
@@ -34,9 +32,9 @@ namespace HealthCareManagement
             _prescriptionRepo.Add(new Prescription(5, 2, "Cetirizine 10mg", DateTime.Now.AddDays(-1)));
         }
 
-        /// <summary>
+      
         /// Build _prescriptionMap by grouping prescriptions by PatientId.
-        /// </summary>
+        
         public void BuildPrescriptionMap()
         {
             _prescriptionMap.Clear();
@@ -53,9 +51,9 @@ namespace HealthCareManagement
             }
         }
 
-        /// <summary>
+
         /// Returns prescriptions for a given patient id using the map.
-        /// </summary>
+
         public List<Prescription> GetPrescriptionsByPatientId(int patientId)
         {
             if (_prescriptionMap.TryGetValue(patientId, out var list))
@@ -64,9 +62,8 @@ namespace HealthCareManagement
             return new List<Prescription>();
         }
 
-        /// <summary>
+
         /// Print all patients stored in the repository.
-        /// </summary>
         public void PrintAllPatients()
         {
             var patients = _patientRepo.GetAll();
@@ -83,9 +80,9 @@ namespace HealthCareManagement
             }
         }
 
-        /// <summary>
+
         /// Print prescriptions for a specific patient (by id) using the prescription map.
-        /// </summary>
+
         public void PrintPrescriptionsForPatient(int patientId)
         {
             var patient = _patientRepo.GetById(p => p.Id == patientId);
@@ -111,11 +108,10 @@ namespace HealthCareManagement
             }
         }
 
-        /// <summary>
+
         /// A simple Run() that executes the required flow:
         /// SeedData -> BuildPrescriptionMap -> PrintAllPatients -> ask user and print prescriptions for chosen patient.
         /// Program.cs should call this when the user selects option 2.
-        /// </summary>
         public void Run()
         {
             SeedData();
